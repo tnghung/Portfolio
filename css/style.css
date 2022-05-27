@@ -1,0 +1,773 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+:root {
+  --main-color: #e38528;
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  line-height: 1.6;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  line-height: 1.5;
+  transition: all 0.3s;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fcf2e8;
+  padding-left: 30rem;
+}
+
+/* ------ Header ----- */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: #222;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 1000;
+  flex-flow: column;
+  padding: 8rem 2rem;
+  width: 30rem;
+  text-align: center;
+  animation: fadeLeft 1.5s normal;
+}
+
+header .logo {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+header .logo span {
+  text-transform: uppercase;
+  color: var(--main-color);
+}
+
+header .navbar__list {
+  list-style: none;
+}
+
+header .navbar__link {
+  display: block;
+  min-width: 19rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+  margin: 2rem 0;
+  padding: 1rem 3rem;
+  background-size: 220%;
+  background-image: linear-gradient(105deg, transparent 50%, var(--main-color) 50%);
+}
+
+header .navbar__link.active {
+  animation: fullActive 0.6s ease-in;
+  animation-fill-mode: forwards;
+}
+
+header .navbar__link:hover {
+  letter-spacing: 0.2rem;
+  color: var(--main-color);
+}
+
+header .navbar__link.active:hover {
+  letter-spacing: 0;
+  color: #fff;
+}
+
+header .follow a {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 0 0.7rem;
+}
+
+header .follow a:hover {
+  transform: translateY(-4px) scale(1.1);
+  color: var(--main-color);
+}
+
+header .follow a:active {
+  transform: translateY(0px) scale(1);
+}
+
+/* ----- Section ----- */
+
+section {
+  padding: 1rem 5%;
+  min-height: 100vh;
+  transition: transform 1.2s, opacity 1.2s;
+}
+
+.section--hidden {
+  opacity: 0;
+  transform: translateY(10rem);
+}
+
+/* ----- Heading ----- */
+.heading {
+  font-size: 4rem;
+  padding-bottom: 1rem;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.heading span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+/* ------ Section home ----- */
+.home {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  gap: 1.5rem;
+  animation: fadeIn 1.2s backwards;
+  animation-delay: 0.7s;
+}
+
+.home .image {
+  flex: 1 1 40rem;
+}
+
+.home .image img {
+  width: 100%;
+}
+
+.home .content {
+  flex: 1 1 40rem;
+}
+
+.home .content .hi {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.home .content h3 {
+  font-size: 4.5rem;
+  color: #111;
+  text-transform: uppercase;
+}
+
+.home .content h3 span {
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.home .content .info {
+  font-size: 2.5rem;
+  color: #111;
+  padding: 0.5rem 0;
+}
+
+.home .content .text {
+  font-size: 1.7rem;
+  color: #666;
+  padding: 0.5rem 0;
+}
+
+/* ------ Cursor ------- */
+.cursor-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1rem;
+  width: 1rem;
+  background: var(--main-color);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10000;
+}
+
+.cursor-1.active {
+  height: 7rem;
+  width: 7rem;
+  opacity: 0.4;
+}
+
+.cursor-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4rem;
+  width: 4rem;
+  border: 0.1rem solid var(--main-color);
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 10000;
+  transition: 0.3s linear;
+}
+
+.cursor-2.active {
+  display: none;
+}
+
+/* ------- Button ------ */
+.btn {
+  position: relative;
+  display: inline-block;
+  margin-top: 1rem;
+  border-radius: 3px;
+  color: #fff;
+  background-color: var(--main-color);
+  cursor: pointer;
+  font-size: 1.8rem;
+  overflow: hidden;
+  padding: 0.4rem 1rem;
+}
+
+.invisible,
+.visible {
+  color: #fff;
+  display: inline-block;
+  padding: 0.4rem;
+}
+
+.visible {
+  padding: 0.4rem 1rem;
+}
+
+.btn .invisible {
+  position: absolute;
+  top: -100%;
+  left: 14%;
+}
+
+.btn--filter {
+  background-color: transparent;
+  border-radius: 5px;
+  color: var(--main-color);
+  font-size: 1.8rem;
+}
+
+.btn:hover .invisible {
+  top: 0.4rem;
+}
+
+.btn:hover .visible {
+  transform: translateY(5rem);
+}
+
+.btn--filter.active {
+  background-color: var(--main-color);
+  color: #fff;
+}
+
+.btn:hover {
+  background: #111;
+  letter-spacing: 0.2rem;
+}
+
+.btn--filter.active:hover {
+  background-color: var(--main-color);
+  letter-spacing: 0;
+  color: #fff;
+}
+.btn--filter:hover {
+  letter-spacing: 0;
+  background: transparent;
+  color: #333;
+  font-weight: 500;
+}
+
+/* ----- Menu bars ----- */
+#menu-bars {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10000;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  font-size: 3rem;
+  cursor: pointer;
+  display: none;
+}
+
+/* ------ About section ----- */
+.about .row-1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+.about .image {
+  flex: 1 1 25rem;
+}
+
+.about .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 1rem solid #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.about .content {
+  flex: 1 1 50rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.about .content h3 {
+  color: #333;
+  font-size: 3.5rem;
+}
+
+.about .content h3 span {
+  color: var(--main-color);
+}
+
+.about .content p,
+.about .content a {
+  display: block;
+  color: #666;
+  font-size: 1.8rem;
+  font-weight: 400;
+  padding: 0.5rem 0;
+}
+
+.about .content .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 0.5rem 0;
+}
+
+.about .box-container .box {
+  flex: 1 1 20rem;
+}
+
+.about .box-container span {
+  color: var(--main-color);
+  text-transform: capitalize;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.about .btn {
+  align-self: center;
+  padding: 1.2rem 3rem;
+}
+
+.about .row-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.about .row-2 .skills {
+  flex: 1 1 40rem;
+}
+
+.about .progress {
+  padding: 1rem 0;
+}
+
+.about .progress h3 {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+  font-size: 1.7rem;
+  color: #111;
+  font-weight: 400;
+}
+
+.about .progress .bar {
+  width: 100%;
+  background: #ccc;
+  overflow: hidden;
+  height: 1rem;
+  border-radius: 50rem;
+}
+
+.about .progress .bar span {
+  display: block;
+  height: 100%;
+  background: var(--main-color);
+  border-radius: 50rem;
+}
+
+.about .progress:nth-child(1) .bar span {
+  width: 95%;
+}
+
+.about .progress:nth-child(2) .bar span {
+  width: 80%;
+}
+
+.about .progress:nth-child(3) .bar span {
+  width: 85%;
+}
+
+.education .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.education .box {
+  position: relative;
+  border-left: 0.2rem solid var(--main-color);
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.education .box:not(:last-child) {
+  padding-bottom: 4rem;
+}
+
+.education .box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -1rem;
+  height: 2rem;
+  width: 2rem;
+  border-radius: 50%;
+  background: var(--main-color);
+}
+
+.education .content {
+  background: #fff;
+  padding: 1.5rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.education .content span {
+  color: #fff;
+  font-size: 1.7rem;
+  background: var(--main-color);
+  border-radius: 50rem;
+  padding: 0.4rem 1rem;
+}
+
+.education .content h3 {
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+  color: #111;
+}
+
+.education .content p {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+/* ------ Projects ------ */
+
+.project .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.project .filterDiv {
+  flex: 1 1 30rem;
+  height: 25rem;
+  position: relative;
+  overflow: hidden;
+  border: 1rem solid #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 0.5rem;
+  display: none;
+}
+
+.project .box-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.project .filterDiv:hover img {
+  height: 80%;
+  width: 87%;
+}
+
+.project .filterDiv h3 {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  font-size: 2.5rem;
+  color: var(--main-color);
+  text-transform: uppercase;
+}
+
+.project .filterDiv span {
+  position: absolute;
+  bottom: 1rem;
+  left: 18rem;
+  font-size: 1.5rem;
+  color: #333;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.project .filterDiv .icons {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.project .icons a {
+  display: block;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 0.5rem;
+  background: #eee;
+  color: #333;
+  font-size: 1.7rem;
+  line-height: 4rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project .icons a:hover {
+  background: var(--main-color);
+  color: #fff;
+}
+
+/* ----- Filter ---- */
+#myBtnContainer {
+  padding-bottom: 2rem;
+}
+.show {
+  display: block !important;
+}
+
+/* ----- Contact ----- */
+.contact .icons-container {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding-bottom: 2rem;
+}
+
+.contact .icons {
+  flex: 1 1 25rem;
+  text-align: center;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.contact .icons i {
+  height: 5rem;
+  width: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  background: var(--main-color);
+  color: #fff;
+  border-radius: 50%;
+}
+
+.contact .icons h3 {
+  color: #111;
+  font-size: 2rem;
+  padding: 0.5rem 0;
+  padding-top: 1rem;
+}
+
+.contact .icons p {
+  color: #666;
+  font-size: 1.7rem;
+}
+
+.contact .icons a:visited,
+.contact .icons a:link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.7rem;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 3px;
+}
+
+.contact .icons a:hover {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+  transition: all 0.6s;
+  font-weight: 600;
+}
+
+.contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.contact .row form {
+  flex: 1 1 55rem;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 0 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.contact .box,
+.contact textarea {
+  width: 100%;
+  border-bottom: 0.1rem solid #333;
+  color: #333;
+  text-transform: none;
+  font-size: 1.7rem;
+  padding: 1rem 0;
+  margin: 1rem 0;
+}
+
+.contact .box:focus,
+.contact textarea:focus {
+  border-bottom: 3px solid var(--main-color);
+}
+
+.contact .box::placeholder,
+.contact textarea::placeholder {
+  text-transform: capitalize;
+  color: #999;
+}
+
+.contact form textarea {
+  height: 12rem;
+  resize: none;
+}
+
+.contact form .btn {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  align-self: center;
+}
+
+.footer {
+  margin-top: 2rem;
+  font-size: 2rem;
+  padding: 2.5rem;
+  text-align: center;
+  color: #666;
+  background: #fff;
+}
+
+.footer span {
+  color: var(--main-color);
+}
+
+/* ------ Animation ----- */
+@keyframes fadeLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-12rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fullActive {
+  0% {
+    background-size: 220%;
+    background-image: linear-gradient(105deg, transparent 50%, var(--main-color) 50%);
+  }
+
+  100% {
+    background-position: 100%;
+  }
+}
+
+/* media queries  */
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+
+  body {
+    padding: 0;
+  }
+
+  #menu-bars {
+    display: block;
+  }
+
+  header {
+    left: -120%;
+  }
+
+  header.active {
+    left: 0%;
+  }
+
+  .visible {
+    transform: translateY(10rem);
+  }
+
+  .btn .invisible {
+    top: 0.4rem;
+  }
+
+  .cursor-1,
+  .cursor-2 {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .home .content {
+    flex: 1 1 46%;
+  }
+
+  .home .image {
+    flex: 1 1 50%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  header {
+    width: 100%;
+  }
+
+  .experience .box-container .box {
+    padding-right: 0;
+  }
+}
