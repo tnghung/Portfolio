@@ -26,6 +26,7 @@ html {
 body {
   background: #fcf2e8;
   padding-left: 30rem;
+  cursor: none;
 }
 
 /* ------ Header ----- */
@@ -109,6 +110,7 @@ header .follow a:active {
 section {
   padding: 1rem 5%;
   min-height: 100vh;
+  opacity: 1;
   transition: transform 1.2s, opacity 1.2s;
 }
 
@@ -212,7 +214,7 @@ section {
   transform: translate(-50%, -50%);
   border-radius: 50%;
   z-index: 10000;
-  transition: 0.3s linear;
+  transition: 0.1s linear;
 }
 
 .cursor-2.active {
@@ -303,6 +305,7 @@ section {
 }
 
 /* ------ About section ----- */
+
 .about .row-1 {
   display: flex;
   flex-wrap: wrap;
@@ -342,7 +345,7 @@ section {
 .about .content a {
   display: block;
   color: #666;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 400;
   padding: 0.5rem 0;
 }
@@ -361,7 +364,7 @@ section {
 .about .box-container span {
   color: var(--main-color);
   text-transform: capitalize;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 600;
 }
 
@@ -407,20 +410,24 @@ section {
   height: 100%;
   background: var(--main-color);
   border-radius: 50rem;
+  width: 0%;
+  transition: width 2s ease-out;
+  transition-delay: 5s;
 }
 
-.about .progress:nth-child(1) .bar span {
+.about .progress:nth-child(1).load .bar span {
   width: 95%;
 }
 
-.about .progress:nth-child(2) .bar span {
+.about .progress:nth-child(2).load .bar span {
   width: 80%;
 }
 
-.about .progress:nth-child(3) .bar span {
+.about .progress:nth-child(3).load .bar span {
   width: 85%;
 }
 
+/* -------- Education ------- */
 .education .box-container {
   display: flex;
   flex-wrap: wrap;
@@ -749,6 +756,9 @@ section {
 }
 
 @media (max-width: 600px) {
+  .home {
+    height: fit-content;
+  }
   .home .content {
     flex: 1 1 46%;
   }

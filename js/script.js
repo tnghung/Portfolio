@@ -5,6 +5,7 @@ const navBarLinks = document.querySelectorAll('.navbar__link');
 const sections = document.querySelectorAll('section');
 const menu = document.querySelector('#menu-bars');
 const header = document.querySelector('header');
+const progressBars = document.querySelectorAll('.progress');
 
 // Menu
 menu.onclick = () => {
@@ -125,10 +126,29 @@ const revealSection = function (entries, observer) {
 
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.2,
+  threshold: 0.15,
 });
 
 sections.forEach((section) => {
   section.classList.add('section--hidden');
   sectionObserver.observe(section);
+});
+
+// Load progress
+const loadProgress = function (entries, observe) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.add('load');
+  observe.unobserve(entry.target);
+};
+
+const progressObsever = new IntersectionObserver(loadProgress, {
+  root: null,
+  threshold: 0.5,
+  rootMargin: '50px',
+});
+
+progressBars.forEach((bar) => {
+  bar.classList.add('load');
+  progressObsever.observe(bar);
 });
