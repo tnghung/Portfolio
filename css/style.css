@@ -249,7 +249,7 @@ section {
 .btn .invisible {
   position: absolute;
   top: -100%;
-  left: 14%;
+  left: 24%;
 }
 
 .btn--filter {
@@ -260,7 +260,7 @@ section {
 }
 
 .btn:hover .invisible {
-  top: 0.4rem;
+  top: 1.2rem;
 }
 
 .btn:hover .visible {
@@ -334,19 +334,23 @@ section {
 
 .about .content h3 {
   color: #333;
-  font-size: 3.5rem;
+  font-size: 2.5rem;
 }
 
 .about .content h3 span {
   color: var(--main-color);
 }
 
-.about .content p,
-.about .content a {
+.about .content p {
+  font-size: 1.7rem;
+}
+
+.about .content .box-container p,
+.about .content .box-container a {
   display: block;
   color: #666;
-  font-size: 1.7rem;
-  font-weight: 400;
+  font-size: 1.48rem;
+  font-weight: 500;
   padding: 0.5rem 0;
 }
 
@@ -364,7 +368,7 @@ section {
 .about .box-container span {
   color: var(--main-color);
   text-transform: capitalize;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 600;
 }
 
