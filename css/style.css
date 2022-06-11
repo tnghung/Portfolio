@@ -76,6 +76,9 @@ img {
   border-radius: 1rem;
   padding: 2rem;
   position: relative;
+  opacity: 0;
+  transform: rotate(-20deg);
+  animation: show-up 2s forwards;
 }
 
 .cover {
@@ -89,14 +92,16 @@ img {
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   transform-origin: 100% 100%;
-}
-
-.cover-left {
-  z-index: -1;
+  transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  transform: rotateY(0);
 }
 
 .cover.turn {
+  transition: transform 1s cubic-bezier(0.645, 0.045, 0.355, 1);
   transform: rotateY(180deg);
+}
+
+.cover-left {
   z-index: -1;
 }
 
@@ -338,4 +343,14 @@ img {
   }
 }
 
-  
+@keyframes show-up {
+  10% {
+    opacity: 0;
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0);
+  }
+}

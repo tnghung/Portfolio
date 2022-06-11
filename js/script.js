@@ -21,3 +21,28 @@ turnPageBtns.forEach((ele, index) => {
     }
   });
 });
+
+const cover = document.querySelector('.cover.right');
+const pages = document.querySelectorAll('.page-right.turn');
+
+// Make the animation open book
+setTimeout(() => {
+  cover.classList.add('turn');
+}, 2100);
+
+setTimeout(() => {
+  cover.style.zIndex = '-1';
+}, 2800);
+
+pages.forEach((ele, index) => {
+  ele.style.zIndex = 20 - index;
+});
+
+pages.forEach((ele, index) => {
+  setTimeout(() => {
+    ele.classList.remove('turn');
+    setTimeout(() => {
+      ele.style.zIndex = 'unset';
+    }, 600);
+  }, (index + 1) * 200 + 2100);
+});
