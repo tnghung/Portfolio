@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nghung2812</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="css/style_old.css" />
+    <script defer src="js/script.js"></script>
+  </head>
+  <body>
+    <!-- custom cursors  -->
+    <div class="cursor-1"></div>
+    <div class="cursor-2"></div>
+
+    <!-- menu bars -->
+    <div id="menu-bars" class="fas fa-bars"></div>
+
+    <header>
+      <a href="https://github.com/tnghung" target="_blank" class="logo"> <span>Hung</span> Nguyen </a>
+      <nav class="navbar">
+        <ul class="navbar__list">
+          <li class="navbar__item"><a href="#home" class="navbar__link active" data-nav="home">home</a></li>
+          <li class="navbar__item"><a href="#about" class="navbar__link" data-nav="about">about</a></li>
+          <li class="navbar__item"><a href="#education" class="navbar__link" data-nav="education">education</a></li>
+          <li class="navbar__item"><a href="#project" class="navbar__link" data-nav="project">projects</a></li>
+          <li class="navbar__item"><a href="#contact" class="navbar__link" data-nav="contact">contact</a></li>
+        </ul>
+      </nav>
+      <div class="follow">
+        <a href="https://www.facebook.com/tnhung2812" target="_blank" class="fab fa-facebook-f"></a>
+        <a href="https://github.com/tnghung" target="_blank" class="fab fa-github"></a>
+        <a href="https://www.facebook.com/tnhung2812" target="_blank" class="fab fa-linkedin"></a>
+        <a href="https://www.facebook.com/tnhung2812" target="_blank" class="fab fa-twitter"></a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Home -->
+      <section class="home" id="home">
+        <div class="content">
+          <span class="hi"> Hi there... </span>
+          <h3>i am <span> Hung </span></h3>
+          <p class="info">My imagination is my favorite tool for creating websites</p>
+          <a href="#about" class="btn">About Me</a>
+        </div>
+
+        <div class="image">
+          <img src="images/home-img.jpg" alt="Avatar for home" />
+        </div>
+      </section>
+
+      <!-- About -->
+      <section class="about" id="about">
+        <h1 class="heading">about <span> me </span></h1>
+
+        <div class="row-1">
+          <div class="image">
+            <img src="images/home-img.jpg" alt="" />
+          </div>
+
+          <div class="content">
+            <h3>
+              My name is <span> Trinh Nguyen Hung </span> <br />
+              I am a <span> Frontend Developer</span>
+            </h3>
+            <p>I'm indeed a software developer who eager to learn as many technologies as possible.</p>
+            <div class="box-container">
+              <div class="box">
+                <p><span> age: </span> 22</p>
+                <p><span> university: </span> University of Science</p>
+                <p><span> skills: </span> SASS, JavaScript, Flutter, Dart</p>
+              </div>
+              <div class="box">
+                <p><span> work: </span> Frontend Developer</p>
+                <a href="tel:0788736815"><span> phone: </span> 0788736815</a>
+                <a href="mailto:tnghung2812@gmail.com"><span> email: </span> tnghung2812@gmail.com</a>
+              </div>
+            </div>
+            <a href="TrinhNguyenHung_CV.pdf" download class="btn">
+              <span class="visible">More Information</span>
+              <span class="invisible">Download CV</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------ Education ------- -->
+      <section class="education" id="education">
+        <h1 class="heading"><span> my </span> education</h1>
+
+        <div class="box-container">
+          <div class="box">
+            <div class="content">
+              <span> 2019 - 2023 </span>
+              <h3>University of Science</h3>
+              <p>- Honors Program of Faculty of Information Technology</p>
+              <p>- GPA: 3.3 / 4.0</p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="content">
+              <span> 12/01/2022 - 26/01/2022</span>
+              <h3>Udemy course: Build websites with HTML and CSS</h3>
+              <p>- Oveview look to website and web design rules.</p>
+              <p>- HTML Fundamentals.</p>
+              <p>- CSS Fundamentals.</p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="content">
+              <span> 01/2022 - 03/2022</span>
+              <h3>Udemy course: Advanced CSS and SASS</h3>
+              <p>- How the CSS works behind the scence.</p>
+              <p>- Learn to use FlexBox and Grid.</p>
+              <p>- Make responsive website.</p>
+              <p>- Explore CSS3 attribute by create a complex animation.</p>
+              <p>- How to use SCSS and create 7-1 pattern for project.</p>
+            </div>
+          </div>
+
+          <div class="box">
+            <div class="content">
+              <span> 02/2022 - 05/2022</span>
+              <h3>Udemy course: Complete JavaScript From Zero to Expert</h3>
+              <p>- How the JavaScript works behind the scence.</p>
+              <p>- JavaScript Fundamentals</p>
+              <p>- Advanced DOM and Events</p>
+              <p>- OOP in JavaScript.</p>
+              <p>- Asynchronous JavaScript.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="project" id="project">
+        <h1 class="heading"><span> my </span> project</h1>
+
+        <div id="myBtnContainer">
+          <button class="btn btn--filter active" onclick="filterSelection('all')">Show all</button>
+          <button class="btn btn--filter" onclick="filterSelection('web')">Website</button>
+          <button class="btn btn--filter" onclick="filterSelection('app')">App</button>
+        </div>
+
+        <div class="box-container">
+          <div class="box filterDiv web">
+            <img src="images/img-1.png" alt="Omnifood project" />
+            <h3>Omnifood</h3>
+            <div class="icons">
+              <a href="https://github.com/tnghung/Omnifood" target="_blank" class="fab fa-github"></a>
+              <a href="https://tnghung.github.io/Omnifood/" target="_blank" class="fas fa-eye"></a>
+            </div>
+          </div>
+
+          <div class="box filterDiv app">
+            <img src="images/app-1.png" alt="Study Life project" />
+            <h3>Study Life</h3>
+            <div class="icons">
+              <a href="https://github.com/huubinh49/SE_timetable" target="_blank" class="fab fa-github"></a>
+              <a href="https://www.kapwing.com/videos/61b21bbb9f9787008e6ea5fa?fbclid=IwAR11NYLQtHlZ8Rf9RvrCA84v_cPOCYFpZp6E0DGhOK_J6qujjzmyQ-nGqVA" target="_blank" class="fas fa-eye"></a>
+            </div>
+          </div>
+
+          <div class="box filterDiv app">
+            <img src="images/app-2.png" alt="GoGo project" />
+            <h3>GoGo</h3>
+            <div class="icons">
+              <a href="https://github.com/tnghung/Omnifood" target="_blank" class="fab fa-github"></a>
+              <a href="https://www.youtube.com/watch?v=FmIGi2rVO8E" target="_blank" class="fas fa-eye"></a>
+            </div>
+          </div>
+
+          <div class="box filterDiv web">
+            <img src="images/img-2.png" alt="Natour project" />
+            <h3>Natours</h3>
+            <div class="icons">
+              <a href="https://github.com/tnghung/Natours" target="_blank" class="fab fa-github"></a>
+              <a href="https://tnghung.github.io/Natours/" target="_blank" class="fas fa-eye"></a>
+            </div>
+          </div>
+
+          <div class="box filterDiv web">
+            <img src="images/img-3.png" alt="Dice-game projcet" />
+            <h3>Dice Game</h3>
+
+            <div class="icons">
+              <a href="https://github.com/tnghung/Dice-Game" target="_blank" class="fab fa-github"></a>
+              <a href="https://tnghung.github.io/Dice-Game/" target="_blank" class="fas fa-eye"></a>
+            </div>
+          </div>
+
+          <div class="box filterDiv web">
+            <img src="images/img-4.png" alt="My bank project" />
+            <h3>My Bank</h3>
+
+            <div class="icons">
+              <a href="https://tnghung.github.io/My-Bank/" target="_blank" class="fab fa-github"></a>
+              <a href="https://github.com/tnghung/My-Bank" target="_blank" class="fas fa-eye"></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h1 class="heading">contact <span> me </span></h1>
+
+        <div class="icons-container">
+          <div class="icons">
+            <i class="fas fa-envelope"></i>
+            <h3>My Email</h3>
+            <a href="mailto:tnghung2812@gmail.com">tnghung2812@gmail.com</a>
+          </div>
+
+          <div class="icons">
+            <i class="fas fa-phone"></i>
+            <h3>My Number</h3>
+            <a href="tel:0788736815">0788736815</a>
+          </div>
+
+          <div class="icons">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>My Address</h3>
+            <a href="https://goo.gl/maps/Kyn66MkoyEy6HSZb9" target="_blank">154/6 Nguyễn Xí, quận Bình Thạnh, TP Hồ Chí Minh</a>
+          </div>
+        </div>
+
+        <div class="row">
+          <form action="#">
+            <input type="text" placeholder="name" class="box" />
+            <input type="email" placeholder="email" class="box" />
+            <textarea name="" placeholder="message" id="" cols="30" rows="6"></textarea>
+            <input type="submit" class="btn btn--form" value="SEND MESSAGE" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">Build with <i class="fas fa-heart" style="color: #ea0000; padding: 0 3px"></i> by <span> Trinh Nguyen Hung </span></footer>
+  </body>
+</html>
