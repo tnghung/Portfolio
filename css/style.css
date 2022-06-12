@@ -71,8 +71,8 @@ img {
 /* ------------------ */
 .book-wrap {
   perspective: 250rem;
-  height: 45rem;
-  width: 66rem;
+  height: 80vh;
+  width: 60%;
   border-radius: 1rem;
   padding: 2rem;
   position: relative;
@@ -237,11 +237,17 @@ img {
   position: absolute;
   right: 0;
   bottom: -1rem;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   font-weight: 600;
   color: var(--txt-header);
   cursor: pointer;
   animation: bounce-left 1.4s ease infinite;
+}
+
+.page-change:active {
+  outline: none;
+  border: none;
+  background-color: transparent;
 }
 
 .page-change--no-animated {
@@ -352,5 +358,27 @@ img {
   100% {
     opacity: 1;
     transform: rotate(0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 430px) {
+  html {
+    font-size: 45%;
+  }
+
+  .book-wrap {
+    height: 80vh;
+    width: 90%;
+  }
+
+  .time {
+    display: none;
   }
 }
